@@ -2,15 +2,27 @@ import { BoolValues } from "../entities/types";
 import { BoolSubstitutor } from "./interfaces";
 
 export class BaseBoolSubstitutor implements BoolSubstitutor {
-    apply(values: BoolValues): string {
+    public apply(values: BoolValues): string {
         const { a, b, c } = values;
-        if (a && b && !c) {
+        if (this.isM(values)) {
             return "M";
-        } else if (a && b && c) {
+        } else if (this.isP(values)) {
             return "P";
-        } else if (!a && b && c){
-            return "T"
+        } else if (this.isT(values)) {
+            return "T";
         }
         throw new Error("Combination not implemented");
+    }
+
+    protected isM({ a, b, c }: BoolValues): boolean {
+        return (a && b && !c);
+    }
+
+    protected isP({ a, b, c }: BoolValues): boolean {
+        return (a && b && c);
+    }
+
+    protected isT({ a, b, c }: BoolValues): boolean {
+        return (!a && b && c);
     }
 };

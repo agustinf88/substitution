@@ -9,7 +9,7 @@ export class BaseSubstitutor implements Substitutor {
         this.boolSubstitutor = boolSubstitutor;
         this.numberSubstitutorFactory = numberSubstitutorFactory;
     }
-    apply(boolValues: BoolValues, numberValues: NumberValues): SubstitutionResult {
+    public apply(boolValues: BoolValues, numberValues: NumberValues): SubstitutionResult {
         const h = this.boolSubstitutor.apply(boolValues);
 
         const numberSubstitutor = this.numberSubstitutorFactory.create(h);
