@@ -37,7 +37,7 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
 
 });
 
-test('When BoolSubstitutor Throws then it should Throws same error', () => {
+test('When BoolSubstitutor Throws then BaseSubstitutor should Throw same error', () => {
     const boolSubstitutor: BoolSubstitutor = {
         apply: (v: BoolValues) => { throw new Error("Bool combination not implemented"); }
     }
