@@ -1,6 +1,6 @@
 import { NumberSubstitutor, NumberSubstitutorFactory } from "../interfaces";
 
-export class DefaultNumberSubstitutorFactory implements NumberSubstitutorFactory{
+export class BaseNumberSubstitutorFactory implements NumberSubstitutorFactory{
     create(value: string): NumberSubstitutor {
         throw new Error("Method not implemented.");
     }
