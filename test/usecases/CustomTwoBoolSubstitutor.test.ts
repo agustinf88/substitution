@@ -1,4 +1,4 @@
-import { CustomTwoBoolSubstitutor } from "../../src/usecases/CustomTwoBoolSubstitutor"
+import { CustomTwoBoolSubstitutor } from "../../src/usecases/boolean/CustomTwoBoolSubstitutor"
 
 test('when A && B && !C then T', () => {
     const useCase = new CustomTwoBoolSubstitutor();

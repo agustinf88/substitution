@@ -1,4 +1,4 @@
-import { BasePNumberSubstitutor } from "../../src/usecases/BasePNumberSubstitutor"
+import { BasePNumberSubstitutor } from "../../src/usecases/number/BasePNumberSubstitutor"
 
 test("D = 2 and e = 5 and f = 2 should return 2.2353", () => {
     const useCase = new BasePNumberSubstitutor();

@@ -1,4 +1,4 @@
-import { BoolValues } from "../entities/types";
+import { BoolValues } from "../../entities/types";
 import { BaseBoolSubstitutor } from "./BaseBoolSubstitutor"
 
 export class CustomTwoBoolSubstitutor extends BaseBoolSubstitutor {

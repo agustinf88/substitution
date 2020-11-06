@@ -1,4 +1,4 @@
-import { BaseKNumberSubstitutor } from "../../src/usecases/BaseKNumberSubstitutor"
+import { BaseKNumberSubstitutor } from "../../src/usecases/number/BaseKNumberSubstitutor"
 
 test("D = 2 and e = 5 and f = 2 should return 1.8667", () => {
     const useCase = new BaseKNumberSubstitutor();

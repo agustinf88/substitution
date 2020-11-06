@@ -1,5 +1,5 @@
-import { NumberValues } from "../entities/types";
-import { NumberSubstitutor } from "./interfaces";
+import { NumberValues } from "../../entities/types";
+import { NumberSubstitutor } from "./../interfaces";
 
 export class CustomOneKNumberSubstitutor implements NumberSubstitutor {
     public apply(values: NumberValues): number {
