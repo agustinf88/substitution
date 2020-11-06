@@ -11,7 +11,7 @@ export class BaseSubstitutor implements Substitutor {
     }
     apply(boolValues: BoolValues, numberValues: NumberValues): SubstitutionResult {
         const h = this.boolSubstitutor.apply(boolValues);
-        
+
         const numberSubstitutor = this.numberStratety.getNumberSubstitutor(h);
 
         const k = numberSubstitutor.apply(numberValues);
