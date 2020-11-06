@@ -2,8 +2,8 @@ import { BoolValues, NumberValues, SubstitutionResult } from "../entities/types"
 import { BoolSubstitutor, NumberSubstitutor, NumberStrategy, Substitutor } from "./interfaces";
 
 export class BaseSubstitutor implements Substitutor {
-    boolSubstitutor: BoolSubstitutor;
-    numberStratety: NumberStrategy;
+    private readonly  boolSubstitutor: BoolSubstitutor;
+    private readonly numberStratety: NumberStrategy;
 
     constructor(boolSubstitutor: BoolSubstitutor, numberStrategy: NumberStrategy) {
         this.boolSubstitutor = boolSubstitutor;

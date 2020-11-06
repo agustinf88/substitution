@@ -28,10 +28,10 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
     }
 
     const useCase = new BaseSubstitutor(boolUseCase, strategy)
-
+    
     
     const actual = useCase.apply(a, b)
     expect(actual.h).toBe("M");
     expect(actual.k).toBe(1);
-    
+
 })
