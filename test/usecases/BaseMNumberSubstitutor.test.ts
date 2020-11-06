@@ -10,6 +10,6 @@ test("D = 2 and e = 5 should return 3", () => {
 
     const actual = useCase.apply(numberValues);
 
-    expect(actual).toBe(3);
+    expect(actual).toBe(2);
 
 });
