@@ -1,6 +1,6 @@
-import { BoolValues, NumberValues } from "../src/entities/types";
-import { BaseSubstitutor } from "../src/usecases/BaseSubstitutor"
-import { BoolSubstitutor, NumberStrategy, NumberSubstitutor } from "../src/usecases/interfaces";
+import { BoolValues, NumberValues } from "../../src/entities/types";
+import { BaseSubstitutor } from "../../src/usecases/BaseSubstitutor"
+import { BoolSubstitutor, NumberStrategy, NumberSubstitutor } from "../../src/usecases/interfaces";
 
 test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct parameters', () => {
 
