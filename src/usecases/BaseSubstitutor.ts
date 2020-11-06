@@ -9,9 +9,14 @@ export class BaseSubstitutor implements Substitutor {
         this.boolSubstitutor = boolSubstitutor;
         this.numberStratety = numberStrategy;
     }
-    apply(boolValies: BoolValues, numberValues: NumberValues): SubstitutionResult {
+    apply(boolValues: BoolValues, numberValues: NumberValues): SubstitutionResult {
+        const h = this.boolSubstitutor.apply(boolValues);
+        
+        const numberSubstitutor = this.numberStratety.getNumberSubstitutor(h);
 
-        throw new Error("Method not implemented.");
+        const k = numberSubstitutor.apply(numberValues);
+
+        return { h, k };
     }
 
 }
