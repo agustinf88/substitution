@@ -8,7 +8,7 @@ export interface NumberSubstitutor {
     apply(values: NumberValues): number
 }
 
-export interface NumberStrategy{
+export interface NumberFactory{
     getNumberSubstitutor(value: string): NumberSubstitutor
 }
 
