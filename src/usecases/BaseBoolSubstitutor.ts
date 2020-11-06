@@ -6,7 +6,9 @@ export class BaseBoolSubstitutor implements BoolSubstitutor {
         const { a, b, c } = values;
         if (a && b && !c) {
             return "M";
+        } else if (a && b && c) {
+            return "P";
         }
-        throw new Error("Method not implemented.");
+        throw new Error("Combination not implemented");
     }
 };

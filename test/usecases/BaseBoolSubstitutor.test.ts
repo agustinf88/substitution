@@ -17,3 +17,18 @@ test('when A && B && !C then M', () => {
 
 });
 
+test('when A && B && C then P', () => {
+    const useCase = new BaseBoolSubstitutor();
+    
+    const boolValues = {
+        a: true,
+        b: true,
+        c: true
+    };
+
+    const actual = useCase.apply(boolValues);
+    
+    expect(actual).toEqual("P");
+
+});
+
