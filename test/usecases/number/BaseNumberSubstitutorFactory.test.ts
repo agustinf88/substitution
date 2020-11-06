@@ -1,6 +1,7 @@
 import { BaseNumberSubstitutorFactory } from "../../../src/usecases/number/BaseNumberSubstitutorFactory"
 import {BaseMNumberSubstitutor} from "../../../src/usecases/number/BaseMNumberSubstitutor"
 import {BasePNumberSubstitutor} from "../../../src/usecases/number/BasePNumberSubstitutor"
+import {BaseTNumberSubstitutor} from "../../../src/usecases/number/BaseTNumberSubstitutor"
 
 test("When unknown value the throws with description", () => {
     const useCase = new BaseNumberSubstitutorFactory();
@@ -19,4 +20,11 @@ test("When P should return instance of BasePNumberSubstitutor", () => {
     const numberSubstitutor = useCase.create("P");
 
     expect(numberSubstitutor).toBeInstanceOf(BasePNumberSubstitutor)
+});
+
+test("When T should return instance of BaseTNumberSubstitutor", () => {
+    const useCase = new BaseNumberSubstitutorFactory();
+    const numberSubstitutor = useCase.create("T");
+
+    expect(numberSubstitutor).toBeInstanceOf(BaseTNumberSubstitutor)
 });
