@@ -1,18 +1,18 @@
 import { BoolValues, NumberValues, SubstitutionResult } from "../entities/types";
-import { BoolSubstitutor, NumberSubstitutor, NumberFactory, Substitutor } from "./interfaces";
+import { BoolSubstitutor, NumberSubstitutorFactory, Substitutor } from "./interfaces";
 
 export class BaseSubstitutor implements Substitutor {
-    private readonly  boolSubstitutor: BoolSubstitutor;
-    private readonly numberFactory: NumberFactory;
+    private readonly boolSubstitutor: BoolSubstitutor;
+    private readonly numberSubstitutorFactory: NumberSubstitutorFactory;
 
-    constructor(boolSubstitutor: BoolSubstitutor, numberFactory: NumberFactory) {
+    constructor(boolSubstitutor: BoolSubstitutor, numberSubstitutorFactory: NumberSubstitutorFactory) {
         this.boolSubstitutor = boolSubstitutor;
-        this.numberFactory = numberFactory;
+        this.numberSubstitutorFactory = numberSubstitutorFactory;
     }
     apply(boolValues: BoolValues, numberValues: NumberValues): SubstitutionResult {
         const h = this.boolSubstitutor.apply(boolValues);
 
-        const numberSubstitutor = this.numberFactory.getNumberSubstitutor(h);
+        const numberSubstitutor = this.numberSubstitutorFactory.create(h);
 
         const k = numberSubstitutor.apply(numberValues);
 

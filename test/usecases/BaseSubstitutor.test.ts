@@ -1,6 +1,6 @@
 import { BoolValues, NumberValues } from "../../src/entities/types";
 import { BaseSubstitutor } from "../../src/usecases/BaseSubstitutor"
-import { BoolSubstitutor, NumberFactory, NumberSubstitutor } from "../../src/usecases/interfaces";
+import { BoolSubstitutor, NumberSubstitutorFactory, NumberSubstitutor } from "../../src/usecases/interfaces";
 
 test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct parameters', () => {
 
@@ -21,8 +21,8 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
         }
     }
 
-    const strategy: NumberFactory = {
-        getNumberSubstitutor: (v: string) => {
+    const strategy: NumberSubstitutorFactory = {
+        create: (v: string) => {
             expect(v).toEqual("M");
             return numberUseCase
         }
