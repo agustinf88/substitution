@@ -1,6 +1,6 @@
 import { CustomOneKNumberSubstitutor } from "../../src/usecases/CustomOneKNumberSubstitutor"
 
-test("D = 2 and e = 5 and f = 2 should return 1.8667", () => {
+test("D = 2 and e = 5 and f = 2 should return 4.1", () => {
     const useCase = new CustomOneKNumberSubstitutor();
 
     const numberValues = {
