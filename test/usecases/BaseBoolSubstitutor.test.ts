@@ -45,4 +45,18 @@ test('when !A && B && C then T', () => {
 
 });
 
+test('when !A && !B && !C then throws with message Combination not implemented', () => {
+    const useCase = new BaseBoolSubstitutor();
+
+    const boolValues = {
+        a: false,
+        b: false,
+        c: false
+    };
+
+    expect(() => useCase.apply(boolValues)) 
+        .toThrowError(new Error("Combination not implemented"));
+
+});
+
 
