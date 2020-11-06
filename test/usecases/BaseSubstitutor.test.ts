@@ -9,21 +9,21 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
 
     const boolUseCase: BoolSubstitutor = {
         apply: (v: BoolValues) => {
-            expect(v).toBe(a);
+            expect(v).toEqual(a);
             return "M";
         }
     }
 
     const numberUseCase: NumberSubstitutor = {
         apply: (v: NumberValues) => {
-            expect(v).toBe(b);
+            expect(v).toEqual(b);
             return 1;
         }
     }
 
     const strategy: NumberFactory = {
         getNumberSubstitutor: (v: string) => {
-            expect(v).toBe("M");
+            expect(v).toEqual("M");
             return numberUseCase
         }
     }
@@ -32,8 +32,8 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
 
 
     const actual = useCase.apply(a, b)
-    expect(actual.h).toBe("M");
-    expect(actual.k).toBe(1);
+    expect(actual.h).toEqual("M");
+    expect(actual.k).toEqual(1);
 
 });
 
