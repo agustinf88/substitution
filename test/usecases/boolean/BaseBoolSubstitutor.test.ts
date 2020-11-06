@@ -1,4 +1,4 @@
-import { BaseBoolSubstitutor } from "../../src/usecases/boolean/BaseBoolSubstitutor"
+import { BaseBoolSubstitutor } from "../../../src/usecases/boolean/BaseBoolSubstitutor"
 
 test('when A && B && !C then M', () => {
     const useCase = new BaseBoolSubstitutor();
