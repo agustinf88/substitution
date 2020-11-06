@@ -30,3 +30,19 @@ test('when A && B && C then P', () => {
 
 });
 
+test('when !A && B && C then T', () => {
+    const useCase = new BaseBoolSubstitutor();
+
+    const boolValues = {
+        a: false,
+        b: true,
+        c: true
+    };
+
+    const actual = useCase.apply(boolValues);
+
+    expect(actual).toEqual("T");
+
+});
+
+

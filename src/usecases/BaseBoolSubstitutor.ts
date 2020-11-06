@@ -8,6 +8,8 @@ export class BaseBoolSubstitutor implements BoolSubstitutor {
             return "M";
         } else if (a && b && c) {
             return "P";
+        } else if (!a && b && c){
+            return "T"
         }
         throw new Error("Combination not implemented");
     }
