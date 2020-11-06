@@ -9,7 +9,7 @@ export type BoolValues = {
 export type NumberValues = {
     d: number,
     e: number,
-    f: number
+    f?: number
 }
 
 export type SubstitutionResult = {
