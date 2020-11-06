@@ -10,11 +10,10 @@ test('when A && B && !C then M', () => {
         b: true,
         c: false
     };
-    
-    const actual = useCase.apply(boolValues);
-    const expected = "M";
 
-    expect(actual).toBe(expect);
+    const actual = useCase.apply(boolValues);
+    
+    expect(actual).toEqual("M");
 
 });
 
