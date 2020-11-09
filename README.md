@@ -49,7 +49,7 @@ npm test
 
 # Decisions approaches
 ## Clean architecture
-I followed the principles of clean architecture to encapsulate the business logic of any type of framework. Once the business login was finished, I decided to use express to expose the service.
+I followed the principles of clean architecture to encapsulate the business logic from any type of framework. Once the business login was finished, I decided to use express to expose the service.
 
 ## TDD
 I used TDD during development
