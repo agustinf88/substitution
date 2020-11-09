@@ -8,10 +8,14 @@ export interface NumberSubstitutor {
     apply(values: NumberValues): number
 }
 
-export interface NumberSubstitutorFactory{
+export interface NumberSubstitutorFactory {
     create(value: string): NumberSubstitutor
 }
 
+
+export interface SubstitutorFactory {
+    create(value: string): Substitutor;
+}
 
 export interface Substitutor {
     apply(boolValies: BoolValues, numberValues: NumberValues): SubstitutionResult

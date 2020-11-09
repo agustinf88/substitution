@@ -1,5 +1,5 @@
 import { BoolValues, NumberValues } from "../../src/entities/types";
-import { BaseSubstitutor } from "../../src/usecases/BaseSubstitutor"
+import { DefaultSubstitutor } from "../../src/usecases/DefaultSubstitutor"
 import { BoolSubstitutor, NumberSubstitutorFactory, NumberSubstitutor } from "../../src/usecases/interfaces";
 
 test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct parameters', () => {
@@ -28,7 +28,7 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
         }
     }
 
-    const useCase = new BaseSubstitutor(boolUseCase, strategy)
+    const useCase = new DefaultSubstitutor(boolUseCase, strategy)
 
 
     const actual = useCase.apply(a, b)
@@ -37,12 +37,12 @@ test('Call BoolSustitutor NumberStrategy and NumberSubstitutor with correct para
 
 });
 
-test('When BoolSubstitutor Throws then BaseSubstitutor should Throw same error', () => {
+test('When BoolSubstitutor Throws then DefaultSubstitutor should Throw same error', () => {
     const boolSubstitutor: BoolSubstitutor = {
         apply: (v: BoolValues) => { throw new Error("Bool combination not implemented"); }
     }
 
-    const useCase = new BaseSubstitutor(boolSubstitutor, undefined);
+    const useCase = new DefaultSubstitutor(boolSubstitutor, undefined);
 
     expect(() => useCase.apply({ a: true, b: true, c: true }, undefined))
         .toThrowError(new Error("Bool combination not implemented"));

@@ -1,7 +1,7 @@
-import { NumberSubstitutor, NumberSubstitutorFactory } from "../interfaces";
-import { BaseTNumberSubstitutor } from "./BaseTNumberSubstitutor";
-import { BaseMNumberSubstitutor } from "./BaseMNumberSubstitutor";
-import { BasePNumberSubstitutor } from "./BasePNumberSubstitutor";
+import { NumberSubstitutor, NumberSubstitutorFactory } from "../../interfaces";
+import { BaseTNumberSubstitutor } from "../BaseTNumberSubstitutor";
+import { BaseMNumberSubstitutor } from "../BaseMNumberSubstitutor";
+import { BasePNumberSubstitutor } from "../BasePNumberSubstitutor";
 
 export class BaseNumberSubstitutorFactory implements NumberSubstitutorFactory {
     create(value: string): NumberSubstitutor {

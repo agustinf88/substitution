@@ -1,7 +1,7 @@
-import { CustomOneKNumberSubstitutor } from "../../../src/usecases/number/CustomOneKNumberSubstitutor"
+import { CustomOnePNumberSubstitutor } from "../../../src/usecases/number/CustomOnePNumberSubstitutor"
 
 test("D = 2 and e = 5 and f = 2 should return 4.1", () => {
-    const useCase = new CustomOneKNumberSubstitutor();
+    const useCase = new CustomOnePNumberSubstitutor();
 
     const numberValues = {
         d: 2,

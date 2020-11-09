@@ -1,7 +1,7 @@
-import { BaseNumberSubstitutorFactory } from "../../../src/usecases/number/BaseNumberSubstitutorFactory"
-import {BaseMNumberSubstitutor} from "../../../src/usecases/number/BaseMNumberSubstitutor"
-import {BasePNumberSubstitutor} from "../../../src/usecases/number/BasePNumberSubstitutor"
-import {BaseTNumberSubstitutor} from "../../../src/usecases/number/BaseTNumberSubstitutor"
+import { BaseNumberSubstitutorFactory } from "../../../../src/usecases/number/factory/BaseNumberSubstitutorFactory"
+import {BaseMNumberSubstitutor} from "../../../../src/usecases/number/BaseMNumberSubstitutor"
+import {BasePNumberSubstitutor} from "../../../../src/usecases/number/BasePNumberSubstitutor"
+import {BaseTNumberSubstitutor} from "../../../../src/usecases/number/BaseTNumberSubstitutor"
 
 test("When unknown value the throws with description", () => {
     const useCase = new BaseNumberSubstitutorFactory();
