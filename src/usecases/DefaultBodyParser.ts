@@ -7,22 +7,22 @@ export class DefaultBodyParser implements BodyParser {
     parse(body: any): SubstitutionOptions {
         const { strategy = "Base", values } = body;
 
-        if (!values.a)
+        if (values.a == null)
             throw new Error("'a' value must be present");
 
-        if (!values.b)
+        if (values.b == null)
             throw new Error("'b' value must be present");
 
-        if (!values.c)
+        if (values.c == null)
             throw new Error("'c' value must be present");
 
-        if (!values.d)
+        if (values.d == null)
             throw new Error("'d' value must be present");
 
-        if (!values.e)
+        if (values.e == null)
             throw new Error("'e' value must be present");
 
-        if (!values.f)
+        if (values.f == null)
             throw new Error("'f' value must be present");
 
         const boolValues: BoolValues = {
