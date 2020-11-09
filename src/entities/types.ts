@@ -16,3 +16,9 @@ export type SubstitutionResult = {
     h: string,
     k: number
 }
+
+export type SubstitutionOptions = {
+    strategy: string,
+    boolValues: BoolValues,
+    numberValues: NumberValues,
+}
