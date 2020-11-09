@@ -17,6 +17,10 @@ export type SubstitutionResult = {
     k: number
 }
 
+export type ErrorResponse = {
+    code?: string,
+    message: string
+}
 export type SubstitutionOptions = {
     strategy: string,
     boolValues: BoolValues,
