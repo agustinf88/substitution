@@ -1,4 +1,4 @@
-import { NumberSubstitutor, NumberSubstitutorFactory } from "../../interfaces";
+import { NumberSubstitutor, NumberSubstitutorFactory } from "../interfaces";
 import { BaseMNumberSubstitutor } from "../BaseMNumberSubstitutor";
 import { BaseTNumberSubstitutor } from "../BaseTNumberSubstitutor";
 import { CustomOnePNumberSubstitutor } from "../CustomOnePNumberSubstitutor";

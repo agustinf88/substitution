@@ -1,5 +1,7 @@
 import { BoolValues, NumberValues, SubstitutionResult } from "../entities/types";
-import { BoolSubstitutor, NumberSubstitutorFactory, Substitutor } from "./interfaces";
+import { Substitutor } from "./interfaces";
+import { BoolSubstitutor } from "./boolean/interfaces";
+import { NumberSubstitutorFactory } from "./number/interfaces";
 
 export class DefaultSubstitutor implements Substitutor {
     private readonly boolSubstitutor: BoolSubstitutor;

@@ -1,5 +1,5 @@
 import { BoolValues } from "../../entities/types";
-import { BoolSubstitutor } from "./../interfaces";
+import { BoolSubstitutor } from "./interfaces";
 
 export class BaseBoolSubstitutor implements BoolSubstitutor {
     public apply(values: BoolValues): string {

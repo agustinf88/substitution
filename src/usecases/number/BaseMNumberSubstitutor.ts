@@ -1,5 +1,5 @@
 import { NumberValues } from "../../entities/types";
-import { NumberSubstitutor } from "./../interfaces";
+import { NumberSubstitutor } from "./interfaces";
 
 export class BaseMNumberSubstitutor implements NumberSubstitutor {
     public apply(values: NumberValues): number {

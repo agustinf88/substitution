@@ -7,19 +7,20 @@ import { CustomOneNumberSubstitutorFactory } from "./number/factory/CustomOneNum
 import { CustomTwoNumberSubstitutorFactory } from "./number/factory/CustomTwoNumberSubstitutorFactory";
 
 export class DefaultSubstitutorFactory implements SubstitutorFactory {
+
     create(value: string): Substitutor {
         if (value === "Base") {
             return new DefaultSubstitutor(new BaseBoolSubstitutor(), new BaseNumberSubstitutorFactory());
         }
 
         if (value === "CustomOne") {
-            return new DefaultSubstitutor(new BaseBoolSubstitutor, new CustomOneNumberSubstitutorFactory());
+            return new DefaultSubstitutor(new BaseBoolSubstitutor(), new CustomOneNumberSubstitutorFactory());
         }
 
         if (value === "CustomTwo") {
             return new DefaultSubstitutor(new CustomTwoBoolSubstitutor(), new CustomTwoNumberSubstitutorFactory());
         }
-        
+
         throw new Error("Method not implemented.");
     }
 

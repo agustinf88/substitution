@@ -2,7 +2,7 @@ import { BoolValues } from "../../entities/types";
 import { BaseBoolSubstitutor } from "./BaseBoolSubstitutor"
 
 export class CustomTwoBoolSubstitutor extends BaseBoolSubstitutor {
-    
+
     protected isM({ a, b, c }: BoolValues): boolean {
         return (a && !b && c);
     }
